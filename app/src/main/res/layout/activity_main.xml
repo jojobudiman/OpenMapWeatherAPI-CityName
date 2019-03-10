@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="OPENWEATHERAPI\nWEATHER INPUT"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Enter City Name"
+            android:inputType="textPersonName"
+            android:textColorLink="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/getweather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/city"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:onClick="cityGet"
+            android:text="Get Data" />
+
+        <TextView
+            android:id="@+id/getcountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/getweather"
+            android:gravity="center"
+            android:text=""
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/getcondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/getweather"
+            android:layout_marginTop="251dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/gettemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/getcondition"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/getsunrise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gettemp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/getsunset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/getsunrise"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/geticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/getcountry"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            tools:srcCompat="@tools:sample/avatars" />
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
